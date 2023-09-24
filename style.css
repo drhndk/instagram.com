@@ -40,7 +40,7 @@ input {
 }
 
 button {
-    margin-top: 16px;
+    margin-top: 13px;
     width: 100%;
     font-size: 14px;
     background-color: rgb(0, 149, 246);
@@ -104,11 +104,14 @@ span {
     font-family: sans-serif;
 }
 
-.errorMassage {
+.div-errorMassage {
     text-align: center;
     color: red;
-    margin-top: 6px;
+    margin-top: 10px;
+    font-family: sans-serif;
 }
+
+.errorMassage {}
 
 .lupaPass {
     color: rgb(0, 149, 246);
