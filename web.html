@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwindcss Portfolio New</title>
+    <link href="dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="animation/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <style>
+    
+  </style>
+  <body class="bg-slate-800 ">
+    <header class="bg-slate-900 p-2 text-white sticky top-0">
+      <div class="flex justify-between items-center">
+        <div class="lg:ml-24 font-mono uppercase">
+          <div class="flex gap-5 items-center">
+            <h4>Vote => <i class="fa-regular fa-star cursor-pointer"></i></h4>
+            <button class="border-2 px-[8px] border-white bg-lime-500 hover:scale-105 btn-kirim">click kirim!</button>
+          </div>
+          <span class="font-bold text-pink-400 text-lg">Dhurhan</span>
+          <span class="text-slate-400 font-extralight">Kusnaidi</span>
+        </div>
+        <div class="lg:mr-24 flex gap-7 items-center">
+          <a href=""
+            ><span class="hidden sm:flex border-b-2 border-b-slate-400"
+              >About</span
+            ></a
+          >
+          <a href=""
+            ><span
+              class="hidden sm:flex hover:border-b-2 hover:border-b-slate-400"
+              >Services</span
+            ></a
+          >
+          <a href=""
+            ><span
+              class="hidden sm:flex hover:border-b-2 hover:border-b-slate-400"
+              >Experience</span
+            ></a
+          >
+          <a href=""
+            ><span
+              class="hidden sm:flex hover:border-b-2 hover:border-b-slate-400"
+              >Contact</span
+            ></a
+          >
+          <div class="sm:hidden">
+            <i class="fa-solid fa-bars-progress cursor-pointer"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="responsive-header flex justify-end h-0 w-0">
+      <!-- Responsive Header -->
+      <div
+        class="rounded-sm w-[250px] text-center bg-slate-400 text-white p-4 shadow-lg shadow-slate-900"
+      >
+        <a href=""><h1 class="bg-slate-900 rounded-sm">About</h1></a>
+        <a href=""><h1 class="mt-3 bg-slate-900 rounded-sm">Services</h1></a>
+        <a href=""><h1 class="mt-3 bg-slate-900">Experience</h1></a>
+        <a href=""><h1 class="mt-3 bg-slate-900 rounded-sm">Contact</h1></a>
+      </div>
+    </div>
+
+    <main class="">
+      <div class="flex flex-wrap lg:p-10">
+        <!-- About -->
+        <div class="lg:w-1/2 w-full p-8 lg:text-center sm:text-start lg:text-lg">
+          <div class="lg:ml-40 lg:p-3">
+            <h1 class="uppercase tracking-[8px] italic">
+              <span class="text-white">-</span>
+              <span class="text-pink-400 font-bold span-dhurhan"></span>
+              <span class="text-slate-400 span-kusnaidi"></span>
+            </h1>
+            <h1>
+              <span class="text-slate-400">Student |</span>
+              <span class="text-yellow-300 tracking-[5px]">Mechanical</span>
+              <span class="text-[crimson] font-bold tracking-[5px]"
+                >Engineering</span
+              >
+            </h1>
+            <p class="text-slate-300">
+              Dalam dunia teknik, kami menjelajahi ilmu untuk mencipta dan memahami. Dedikasi terhadap pengetahuan menginspirasi langkah maju, di mana imajinasi bertemu kenyataan. Dalam perjalanan ini, kita menemukan solusi dan menggali potensi, melangkah bersama menuju masa depan yang tak terbatas.
+            </p>
+
+            <div
+              class="flex lg:justify-center sm:justify-start items-center lg:mt-3 gap-4"
+            >
+              <a href="https://www.youtube.com/@dhurhankusnaidi4510">
+                <div
+                  class="bg-white w-7 text-lg rounded-full text-center shadow-lg shadow-red-500 text-red-700 hover:scale-125"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                </div>
+              </a>
+              <a href="https://github.com/drhndk">
+                <div
+                  class="bg-white w-7 text-lg rounded-full text-center shadow-lg shadow-green-500 hover:scale-125"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </div>
+              </a>
+              <a href="">
+                <div
+                  class="bg-white text-blue-600 w-7 text-lg rounded-full text-center shadow-lg shadow-sky-500 hover:scale-125"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                </div>
+              </a>
+              <a href="https://www.instagram.com/drhndk_/">
+                <div
+                  class="bg-white text-red-500 w-7 text-lg rounded-full text-center shadow-lg shadow-orange-500 hover:scale-125"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 flex justify-center items-cente">
+          <img
+            class="lg:ml-[72px] lg:-mt-2"
+            src="img/Tengkober-removebg-preview.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- About end-->
+
+      <div class="lg:-mt-10 p-2 bg-slate-900">
+        <!-- Experience -->
+        <h1
+          class="text-center uppercase text-lg text-purple-800 font-extrabold shadow-xl rounded-sm shadow-pink-500 w-[200px] mx-auto"
+        >
+          Experience
+        </h1>
+        <div
+          class="flex lg:w-1/2 sm:w-full justify-center flex-wrap mx-auto gap-4 p-4"
+        >
+          <div
+            class="w-[200px] bg-slate-900 group flex-1 rounded-lg text-center p-6"
+          >
+            <div>
+              <div
+                class="w-[100px] h-[100px] mx-auto shadow-lg shadow-orange-600 group-hover:scale-110 group-hover:rotate-6 transition duration-500"
+              >
+                <img class="animate-pulse" src="img/html5.png" alt="" />
+              </div>
+              <h1 class="text-orange-600 font-bold">HTML</h1>
+              <p class="text-slate-400">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-[200px] group bg-slate-900 flex-1 rounded-lg text-center p-6"
+          >
+            <div>
+              <div
+                class="w-[100px] h-[100px] mx-auto shadow-lg shadow-blue-600 group-hover:scale-110 transition duration-500"
+              >
+                <img class="animate-pulse" src="img/css.png" alt="" />
+              </div>
+              <h1 class="text-sky-600 font-bold">CSS</h1>
+              <p class="text-slate-400">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-[200px] group bg-slate-900 rounded-lg flex-1 text-center p-6"
+          >
+            <div>
+              <div
+                class="w-[100px] h-[100px] mx-auto shadow-lg shadow-yellow-600 group-hover:scale-110 transition duration-500 group-hover:-rotate-6"
+              >
+                <img
+                  class="animate-pulse mx-auto"
+                  src="img/js-removebg-preview.png"
+                  alt=""
+                  height="100px"
+                  width="90px"
+                />
+              </div>
+              <h1 class="text-yellow-600 font-bold">JavaScript</h1>
+              <p class="text-slate-400">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-[200px] group bg-slate-900 rounded-lg flex-1 lg:flex-none text-center p-6"
+          >
+            <div>
+              <div
+                class="w-[100px] h-[100px] flex justify-center items-center mx-auto shadow-lg shadow-purple-600 group-hover:scale-110 transition duration-500"
+              >
+                <img class="animate-pulse" src="img/bootstrap.png" alt="" />
+              </div>
+              <h1 class="text-purple-500 font-bold">Bootstrap</h1>
+              <p class="text-slate-400">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="w-[200px] group bg-slate-900 rounded-lg text-center p-6">
+            <div>
+              <div
+                class="w-[100px] h-[100px] mx-auto shadow-lg shadow-sky-400 group-hover:scale-110 transition duration-500 flex justify-center items-center"
+              >
+                <img
+                  class="animate-pulse"
+                  src="img/tailwindcss-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-sky-400 font-bold">TailwindCSS</h1>
+              <p class="text-slate-400">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Experience end -->
+
+      <!-- specialized in -->
+      <div class="mt-3">   
+      <h1
+      class="text-center uppercase text-lg text-white font-extrabold shadow-xl rounded-sm shadow-sky-500 w-[200px] mx-auto "
+    >
+      Specialized in
+    </h1>
+    <div class="flex gap-6 justify-center items-center flex-wrap lg:h-[350px] md:h-[350px] mt-4 lg:mt-0">
+      
+      <div class="w-[250px] p-4 bg-sky-500">
+        <div class="bg-slate-600 p-2 rounded-full flex items-center justify-around">
+          <img  src="img/ui-design.png" alt="" width="40px" >
+          <h1 class="text-center text-white">UI/UX Design </h1>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, sequi.</p>
+      </div>
+      <div class="w-[250px] p-4 bg-pink-500">
+        <div class="bg-slate-600 p-2 rounded-full flex items-center justify-around">
+          <img src="img/coding.png" alt="" width="40px" >
+          <h1 class="text-center text-white">Web Development </h1>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, sequi.</p>
+      </div>
+      <div class="w-[250px] h-[160px] p-4 bg-yellow-500">
+        <div class="bg-slate-600 p-2 rounded-full flex items-center justify-around">
+          <img src="img/application-settings.png" alt="" width="40px" >
+          <h1 class="text-center text-white">Application Development </h1>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, sequi.</p>
+      </div>
+    </div>
+  </div>
+      <!-- specialized in end -->
+
+      <!-- Contact -->
+        <div class="h-[400px] mt-10 lg:mt-5 md:mt-5">
+          <h1
+          class="text-center uppercase text-lg  font-extrabold shadow-xl rounded-sm shadow-lime-500 w-[200px] mx-auto lg:text-lime-500 bg-lime-500 lg:bg-slate-800"
+        >
+          Contact Me
+        </h1>
+        <div class="flex justify-center mt-4">
+        <div class=" w-[90vw] lg:w-[500px] md:w-[500px]">
+          <form>
+            <div>
+              <label class=" text-lime-500 font-semibold">Name</label>
+              <input class="w-full p-1 outline-green-600 rounded-md border-2 border-slate-600" type="text">
+            </div>
+            <div class="mt-3">
+              <label class=" text-lime-500 font-semibold">Email</label>
+              <input class="w-full p-1 outline-green-600 rounded-md border-2 border-slate-600" type="text">
+            </div>
+            <div class="mt-3">
+              <label class=" text-lime-500 font-semibold">Pesan</label>
+              <textarea class="w-full p-2 outline-green-600  border-2 border-slate-600"></textarea>
+            </div>
+            <div class="flex justify-center items-center mt-3">
+              <button class= "bg-lime-500 py-[8px] px-[50px] font-semibold rounded-lg active:scale-[0.97px]">submit</button>
+            </div>
+          </form>
+        </div>
+        </div>
+        </div>
+
+      <!-- Contact end -->
+
+
+    </main>
+
+    <footer>
+      <div class="waveWrapper waveAnimation ">  
+         <div class="waveWrapperInner bgTop">
+          <div class="wave waveTop"></div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+          <div class="wave waveMiddle"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+          <div class="wave waveBottom"></div>
+        </div> 
+    </div> 
+    <div class="h-[200px] bg-white custom-filter">
+    </div> 
+    </footer>
+
+    <script>
+      const btnHeader = document.querySelector(".fa-bars-progress");
+      const responsiveHeader = document.querySelector(".responsive-header");
+
+      btnHeader.addEventListener("click", () => {
+        responsiveHeader.classList.toggle("w-0");
+        responsiveHeader.classList.toggle("h-res");
+        responsiveHeader.style.transition = ".7s";
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script>
+      const star = document.querySelector('.fa-star')
+      const btnKirim = document.querySelector('.btn-kirim')
+      btnKirim.addEventListener('click', () => {
+        if (star.className == 'fa-solid fa-star cursor-pointer') {
+          btnKirim.innerHTML ='Terima kasih'
+        }
+      })
+      star.addEventListener('click', () => {
+        if (star.className == 'fa-regular fa-star cursor-pointer') {
+          star.className = 'fa-solid fa-star cursor-pointer'
+        }else {
+          star.className = 'fa-regular fa-star cursor-pointer'
+        }
+      })
+    </script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      const tl = gsap.timeline({ repeat: -1 });
+
+      tl.to(".span-dhurhan", {
+        duration: 2,
+        text: "Dhurhan",
+        from: {
+          opacity: 0,
+          x: "-100%",
+        },
+      }).to(".span-kusnaidi", {
+        duration: 2,
+        text: "Kusnaidi",
+        from: {
+          opacity: 0,
+          x: "-100%",
+        },
+      });
+    </script>
+  </body>
+</html>

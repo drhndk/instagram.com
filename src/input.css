@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.h-res {
+    height: 160px;
+}
+
+.custom-filter {
+    filter: brightness(0.4) sepia(1) hue-rotate(180deg) saturate(3);
+}
