@@ -49,9 +49,9 @@
               >Contact</span
             ></a
           >
-          <a href="/index.html"
+          <a href="index.html"
             ><span
-              class="hidden sm:flex hover:border-b-2 hover:border-b-slate-400"
+              class="hidden sm:flex hover:border-b-2 hover:border-b-slate-400 log-out"
               >Log out</span
             ></a
           >
@@ -70,7 +70,7 @@
         <a href=""><h1 class="mt-3 bg-slate-900 rounded-sm">Services</h1></a>
         <a href="#Experience"><h1 class="mt-3 bg-slate-900">Experience</h1></a>
         <a href=""><h1 class="mt-3 bg-slate-900 rounded-sm">Contact</h1></a>
-        <a href="/index.html"><h1 class="mt-3 bg-slate-900 rounded-sm">Log out</h1></a>
+        <a href="index.html"><h1 class="mt-3 bg-slate-900 rounded-sm log-out">Log out</h1></a>
       </div>
     </div>
 
@@ -336,9 +336,15 @@
     <script>
       const stars = document.querySelectorAll('.fa-star')
       const btnKirim = document.querySelector('.btn-kirim')
-  
-      
-      let currentNum = 1
+      const logOutEL = document.querySelectorAll('.log-out')
+      console.log(logOutEL);
+
+      logOutEL.forEach((el) => {
+        el.addEventListener('click', () => {
+          window.location.href = 'index.html';
+        })
+      })
+
       stars.forEach((star,i) => {
         star.addEventListener('click', () => {
         if (star.className == 'fa-regular fa-star cursor-pointer') {
