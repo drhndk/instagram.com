@@ -14,13 +14,13 @@
   <style>
     
   </style>
-  <body class="bg-slate-800 ">
+  <body class="bg-slate-800">
     <header class="bg-slate-900 p-2 text-white sticky top-0">
       <div class="flex justify-between items-center">
         <div class="lg:ml-24 font-mono uppercase">
-          <div class="flex gap-5 items-center">
-            <h4>Vote => <i class="fa-regular fa-star cursor-pointer"></i></h4>
-            <button class="border-2 px-[8px] border-white bg-lime-500 hover:scale-105 btn-kirim">click kirim!</button>
+          <div class="flex gap-[20px] items-center ">
+            <h4>Vote =><i class="fa-regular fa-star cursor-pointer"></i><i class="fa-regular fa-star cursor-pointer"></i><i class="fa-regular fa-star cursor-pointer"></i><i class="fa-regular fa-star cursor-pointer"></i><i class="fa-regular fa-star cursor-pointer"></i></h4>
+            <button class="border-2 px-[8px]  border-white bg-lime-500 hover:scale-105 btn-kirim">click kirim!</button>
           </div>
           <span class="font-bold text-pink-400 text-lg">Dhurhan</span>
           <span class="text-slate-400 font-extralight">Kusnaidi</span>
@@ -37,7 +37,7 @@
               >Services</span
             ></a
           >
-          <a href=""
+          <a href="#Experience"
             ><span
               class="hidden sm:flex hover:border-b-2 hover:border-b-slate-400"
               >Experience</span
@@ -49,21 +49,28 @@
               >Contact</span
             ></a
           >
+          <a href="/index.html"
+            ><span
+              class="hidden sm:flex hover:border-b-2 hover:border-b-slate-400"
+              >Log out</span
+            ></a
+          >
           <div class="sm:hidden">
             <i class="fa-solid fa-bars-progress cursor-pointer"></i>
           </div>
         </div>
       </div>
     </header>
-    <div class="responsive-header flex justify-end h-0 w-0">
-      <!-- Responsive Header -->
+    <!-- Responsive Header -->
+    <div class="responsive-header flex justify-end h-0 w-0 sticky top-[70px]">
       <div
-        class="rounded-sm w-[250px] text-center bg-slate-400 text-white p-4 shadow-lg shadow-slate-900"
+        class="rounded-sm w-[280px] text-center bg-slate-400 text-white p-4 shadow-lg shadow-slate-900 "
       >
         <a href=""><h1 class="bg-slate-900 rounded-sm">About</h1></a>
         <a href=""><h1 class="mt-3 bg-slate-900 rounded-sm">Services</h1></a>
-        <a href=""><h1 class="mt-3 bg-slate-900">Experience</h1></a>
+        <a href="#Experience"><h1 class="mt-3 bg-slate-900">Experience</h1></a>
         <a href=""><h1 class="mt-3 bg-slate-900 rounded-sm">Contact</h1></a>
+        <a href="/index.html"><h1 class="mt-3 bg-slate-900 rounded-sm">Log out</h1></a>
       </div>
     </div>
 
@@ -132,7 +139,7 @@
       </div>
       <!-- About end-->
 
-      <div class="lg:-mt-10 p-2 bg-slate-900">
+      <div class="lg:-mt-10 p-2 bg-slate-900" id="Experience">
         <!-- Experience -->
         <h1
           class="text-center uppercase text-lg text-purple-800 font-extrabold shadow-xl rounded-sm shadow-pink-500 w-[200px] mx-auto"
@@ -327,20 +334,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
     <script>
-      const star = document.querySelector('.fa-star')
+      const stars = document.querySelectorAll('.fa-star')
       const btnKirim = document.querySelector('.btn-kirim')
-      btnKirim.addEventListener('click', () => {
-        if (star.className == 'fa-solid fa-star cursor-pointer') {
-          btnKirim.innerHTML ='Terima kasih'
-        }
-      })
-      star.addEventListener('click', () => {
+  
+      
+      let currentNum = 1
+      stars.forEach((star,i) => {
+        star.addEventListener('click', () => {
         if (star.className == 'fa-regular fa-star cursor-pointer') {
           star.className = 'fa-solid fa-star cursor-pointer'
         }else {
           star.className = 'fa-regular fa-star cursor-pointer'
         }
+      })  
+      btnKirim.addEventListener('click', () => {
+        if (star.className == 'fa-solid fa-star cursor-pointer') {
+          btnKirim.innerHTML ='Terima kasih'
+        }
       })
+      })
+      
     </script>
     <script>
       gsap.registerPlugin(TextPlugin);
