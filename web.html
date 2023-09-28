@@ -18,10 +18,6 @@
     <header class="bg-slate-900 p-2 text-white sticky top-0">
       <div class="flex justify-between items-center">
         <div class="lg:ml-24 font-mono uppercase">
-          <div class="flex gap-[20px] items-center ">
-            <h4>Vote =><i class="fa-regular fa-star cursor-pointer"></i><i class="fa-regular fa-star cursor-pointer"></i><i class="fa-regular fa-star cursor-pointer"></i><i class="fa-regular fa-star cursor-pointer"></i><i class="fa-regular fa-star cursor-pointer"></i></h4>
-            <button class="border-2 px-[8px]  border-white bg-lime-500 hover:scale-105 btn-kirim">click kirim!</button>
-          </div>
           <span class="font-bold text-pink-400 text-lg">Dhurhan</span>
           <span class="text-slate-400 font-extralight">Kusnaidi</span>
         </div>
@@ -78,7 +74,16 @@
       <div class="flex flex-wrap lg:p-10">
         <!-- About -->
         <div class="lg:w-1/2 w-full p-8 lg:text-center sm:text-start lg:text-lg">
-          <div class="lg:ml-40 lg:p-3">
+          <div class="mt-[-15px]">
+            <div class="mt-[-5px]">
+              <h4 class="text-white ">VOTE=><i class="fa-regular fa-star cursor-pointer"></i><i class="fa-regular fa-star cursor-pointer"></i><i class="fa-regular fa-star cursor-pointer"></i><i class="fa-regular fa-star cursor-pointer"></i><i class="fa-regular fa-star cursor-pointer"></i></h4>
+          </div>
+            <div class="mt-[6px] flex lg:justify-center">
+            <input type="text" placeholder="isi nama pengirim..." class="px-[6px] text-black outline-none nama-pengirim">
+          <button class="border-2 px-[8px]  border-white bg-lime-500 hover:scale-105 btn-kirim">click kirim!</button>
+        </div>
+        </div>
+          <div class="lg:ml-40 lg:p-3 text-white">
             <h1 class="uppercase tracking-[8px] italic">
               <span class="text-white">-</span>
               <span class="text-pink-400 font-bold span-dhurhan"></span>
@@ -337,8 +342,7 @@
       const stars = document.querySelectorAll('.fa-star')
       const btnKirim = document.querySelector('.btn-kirim')
       const logOutEL = document.querySelectorAll('.log-out')
-      console.log(logOutEL);
-
+      const namaPengirimEL = document.querySelector('.nama-pengirim')
       logOutEL.forEach((el) => {
         el.addEventListener('click', () => {
           window.location.href = 'index.html';
@@ -353,8 +357,17 @@
           star.className = 'fa-regular fa-star cursor-pointer'
         }
       })  
-      btnKirim.addEventListener('click', () => {
-        if (star.className == 'fa-solid fa-star cursor-pointer') {
+      function randomString() {
+        const randomMassage = ['SEMOGA HARI MU MENYENANGKAN','I LOVE YOU','Thank you for giving me stars']
+       const random =  Math.floor(Math.random()*randomMassage.length)
+       const ex = randomMassage[random]
+       return ex
+      }
+      btnKirim.addEventListener('click', (e) => {
+        e.preventDefault()
+        randomString()
+        if (star.className == 'fa-solid fa-star cursor-pointer' && namaPengirimEL.value !== '') {
+          alert(`Terima Kasih ${namaPengirimEL.value}, ${randomString()}`)
           btnKirim.innerHTML ='Terima kasih'
         }
       })
