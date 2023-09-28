@@ -365,12 +365,12 @@
           star.className = 'fa-regular fa-star cursor-pointer'
         }
       })  
-    
       btnKirim.addEventListener('click', (e) => {
         e.preventDefault()
-        if (star.className == 'fa-solid fa-star cursor-pointer' && namaPengirimEL.value !== '') {
+        if (star.className == 'fa-solid fa-star cursor-pointer' && namaPengirimEL.value !== '' ) {
           alert(`Terima Kasih ${namaPengirimEL.value}, ${randomNum}`)
           btnKirim.innerHTML ='Terima kasih'
+          btnKirim.disabled = true
         }
       })
     })
