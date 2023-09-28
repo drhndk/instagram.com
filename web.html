@@ -348,6 +348,14 @@
           window.location.href = 'index.html';
         })
       })
+      const randomMassage = ['SEMOGA HARI MU MENYENANGKAN','I LOVE YOU','Thank you for giving me stars']
+      let random = ''
+      function randomString() {
+        for(let i = 0; i< 1; i++) {
+          return Math.floor(Math.random()*randomMassage.length)
+        }
+      }
+        const randomNum = random += randomMassage[randomString()]
 
       stars.forEach((star,i) => {
         star.addEventListener('click', () => {
@@ -357,21 +365,16 @@
           star.className = 'fa-regular fa-star cursor-pointer'
         }
       })  
-      function randomString() {
-        const randomMassage = ['SEMOGA HARI MU MENYENANGKAN','I LOVE YOU','Thank you for giving me stars']
-       const random =  Math.floor(Math.random()*randomMassage.length)
-       const ex = randomMassage[random]
-       return ex
-      }
+    
       btnKirim.addEventListener('click', (e) => {
         e.preventDefault()
-        randomString()
         if (star.className == 'fa-solid fa-star cursor-pointer' && namaPengirimEL.value !== '') {
-          alert(`Terima Kasih ${namaPengirimEL.value}, ${randomString()}`)
+          alert(`Terima Kasih ${namaPengirimEL.value}, ${randomNum}`)
           btnKirim.innerHTML ='Terima kasih'
         }
       })
-      })
+    })
+    
       
     </script>
     <script>
